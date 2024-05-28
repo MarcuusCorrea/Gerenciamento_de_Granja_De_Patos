@@ -1,128 +1,85 @@
-# Gerenciamento_de_Granja_De_Patos
-Esta é uma API REST desenvolvida com Java e Spring Boot para gerenciar uma granja de patos. A aplicação permite o cadastro individual de patos, a venda de patos para clientes, e a geração de relatórios em formatos Excel e PDF.
+# Gerenciamento de Granja de Patos
 
-#Funcionalidades:
-<p1>Cadastro de Patos</p1>
-Endpoint para cadastrar patos com detalhes como nome, status, preço e mãe.
-Cada pato pode ser registrado com a indicação de sua mãe para melhor rastreamento.
-Cadastro de Clientes
-Endpoint para cadastrar clientes, incluindo nome e elegibilidade para desconto.
-Cada cliente pode ser indicado como elegível ou não para desconto.
-Venda de Patos
-Endpoint para registrar vendas de patos para clientes cadastrados.
-Aplicação de desconto de 20% para clientes elegíveis.
-Registro automático da data da venda.
-Listagem de Patos Vendidos
-Endpoint para listar todos os patos vendidos, incluindo a data da venda e o cliente que comprou.
-Geração de Relatórios
-Endpoints para gerar relatórios de gerenciamento de patos em formatos Excel e PDF.
-Relatórios incluem informações detalhadas sobre os patos cadastrados, patos vendidos e as respectivas transações.
-Tecnologias Utilizadas
-Java: Linguagem de programação principal.
-Spring Boot: Framework para criar a API REST.
-JPA/Hibernate: Para persistência de dados.
-MySQL/PostgreSQL: Base de dados para armazenar informações.
-Apache POI: Biblioteca para geração de relatórios em Excel.
-JasperReports: Biblioteca para geração de relatórios em PDF.
-Docker: Para containerização da aplicação.
-Flyway: Para gerenciamento de migrações do banco de dados.
-Requisitos de Instalação
-Java 11 ou superior
-Maven para gerenciamento de dependências
-Docker para containerização da aplicação
-Configuração Inicial
-Criação do Projeto
-O arquivo pom.xml foi inicialmente criado pelo Spring Initializr. A dependência do JasperReports foi adicionada manualmente.
+Este projeto consiste em uma API REST desenvolvida em Java utilizando Spring Boot para gerenciar uma granja de patos. A API permite o cadastro individual de patos, cadastro de clientes, venda de patos para clientes cadastrados e geração de relatórios em formatos Excel e PDF.
 
-xml
-Copiar código
-<dependency>
-    <groupId>net.sf.jasperreports</groupId>
-    <artifactId>jasperreports</artifactId>
-    <version>6.17.0</version>
-</dependency>
-Configuração do Docker
-Instale o Docker seguindo as instruções da documentação oficial.
-Crie o arquivo docker-compose.yml para definir os serviços necessários.
-yaml
-Copiar código
-version: '3.8'
+## Requisitos Funcionais
 
-services:
-  db:
-    image: mysql:8.0
-    container_name: pato_db
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: patos
-      MYSQL_USER: user
-      MYSQL_PASSWORD: password
-    ports:
-      - "3306:3306"
-    volumes:
-      - db_data:/var/lib/mysql
+1. **Cadastro de Patos:**
+    - Cada pato deve ser cadastrado individualmente no sistema.
+    - Durante o cadastro, é necessário indicar a "mãe" de cada pato para melhor rastreamento.
 
-  app:
-    image: openjdk:11
-    container_name: pato_app
-    ports:
-      - "8080:8080"
-    volumes:
-      - .:/app
-    working_dir: /app
-    command: mvn spring-boot:run
-    depends_on:
-      - db
+2. **Cadastro de Clientes:**
+    - Os clientes podem ser cadastrados no sistema.
+    - Cada cliente deve ter uma indicação se ele é elegível para desconto ou não (com/sem desconto).
 
-volumes:
-  db_data:
-Configuração do Banco de Dados
-No arquivo application.properties, configure as credenciais e URL do banco de dados:
+3. **Venda de Patos:**
+    - É possível registrar a venda de um ou mais patos para um cliente cadastrado.
+    - Se o cliente for elegível para desconto, será aplicado um desconto de 20% no valor total da venda.
+    - A data da venda é registrada automaticamente.
 
-properties
-Copiar código
-spring.datasource.url=jdbc:mysql://db:3306/patos
-spring.datasource.username=user
-spring.datasource.password=password
-spring.jpa.hibernate.ddl-auto=update
+4. **Listagem de Patos Vendidos:**
+    - O sistema permite a listagem de todos os patos vendidos, incluindo a data da venda e o cliente para quem foram vendidos.
 
-spring.flyway.enabled=true
-spring.flyway.baseline-on-migrate=true
-Iniciando a Aplicação
-Após toda a configuração, utilize o comando abaixo no Git Bash para iniciar os serviços:
+5. **Geração de Relatórios:**
+    - É possível gerar relatórios de gerenciamento de patos em dois formatos: Excel e PDF.
+    - Os relatórios incluem informações detalhadas sobre os patos cadastrados, patos vendidos e as respectivas transações.
 
-bash
-Copiar código
-docker-compose up
-Estrutura do Projeto
-Modelos
-Cliente
-Pato
-Venda
-DTOs
-VendaRequest
-Repositórios
-ClienteRepository
-PatoRepository
-VendaRepository
-Serviços
-ClienteService
-PatoService
-VendaService
-RelatorioExcelService
-RelatorioPdfService
-Controladores
-ClienteController
-PatoController
-VendaController
-RelatorioController
-Relatórios
-Geração de relatórios em Excel com Apache POI.
-Geração de relatórios em PDF com JasperReports.
+## Funcionalidades da API
+
+- **Cadastro de Patos:** Endpoint para cadastrar patos com detalhes como nome e mãe.
+- **Cadastro de Clientes:** Endpoint para cadastrar clientes, incluindo nome e elegibilidade para desconto.
+- **Registro de Vendas:** Endpoint para registrar vendas, aplicando descontos conforme necessário e registrando a data da venda.
+- **Listagem de Patos Vendidos:** Endpoint para obter uma lista de todos os patos vendidos com detalhes da transação.
+- **Geração de Relatórios:** Endpoints para gerar e baixar relatórios em Excel e PDF.
+
+## Tecnologias Utilizadas
+
+- Java: Linguagem de programação principal.
+- Spring Boot: Framework para criar a API REST.
+- JPA/Hibernate: Para persistência de dados.
+- MySQL/PostgreSQL: Base de dados para armazenar informações.
+- Apache POI: Biblioteca para geração de relatórios em Excel.
+- Jasper Report: Biblioteca para geração de relatórios em PDF.
+
+## Estrutura do Projeto
+
+O projeto possui a seguinte estrutura de pacotes:
+
+- **controller:** Contém os controladores da API.
+    - `PatoController`: Controlador para operações relacionadas aos patos.
+    - `ClienteController`: Controlador para operações relacionadas aos clientes.
+    - `VendaController`: Controlador para operações relacionadas às vendas.
+    - `RelatorioController`: Controlador para operações relacionadas à geração de relatórios.
+
+- **service:** Contém os serviços da aplicação.
+    - `PatoService`: Serviço para operações relacionadas aos patos.
+    - `ClienteService`: Serviço para operações relacionadas aos clientes.
+    - `VendaService`: Serviço para operações relacionadas às vendas.
+    - `RelatorioExcelService`: Serviço para geração de relatórios em Excel.
+    - `RelatorioPdfService`: Serviço para geração de relatórios em PDF.
+
+- **model:** Contém as entidades do sistema.
+    - `Pato`: Entidade representando um pato.
+    - `Cliente`: Entidade representando um cliente.
+    - `VendaRequest`: DTO para requisição de venda.
+    - `Relatorio`: DTO para representar informações no relatório.
+
+## Preços de Venda dos Patos
+
+- Pato com 1 filho: R$ 50,00
+- Pato com 2 filhos: R$ 25,00
+- Pato sem filhos: R$ 70,00
+
+## Configuração do Ambiente
+
+Para executar o projeto, siga estas etapas:
+
+1. Instale o Docker.
+2. Configure a imagem do Docker utilizando o arquivo `docker-compose.yml`.
+3. Configure as informações do banco de dados no arquivo `application.properties`.
+4. Execute o seguinte comando no terminal para iniciar o ambiente:
+   ```bash
+   docker-compose up
+Acesse a API através do endpoint correspondente à sua operação desejada.
 Diferenciais
-Utilização de Docker para containerização.
-Utilização do Flyway para gerenciamento de migrações do banco de dados.
-Testes unitários para validação das funcionalidades.
-Autor
-Desenvolvido por [Seu Nome].
 
