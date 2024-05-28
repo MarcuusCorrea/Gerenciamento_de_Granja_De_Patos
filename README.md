@@ -58,6 +58,10 @@ Este projeto consiste em uma API REST desenvolvida em Java utilizando Spring Boo
     - É possível gerar relatórios de gerenciamento de patos em dois formatos: Excel e PDF.
     - Os relatórios incluem informações detalhadas sobre os patos cadastrados, patos vendidos e as respectivas transações.
 
+## Diagrama UML:
+<p align="center"> 
+    <img src= "https://github.com/MarcuusCorrea/Gerenciamento_de_Granja_De_Patos/assets/96303668/404d5f4c-0efd-411d-9779-cd86e61bf3f2" alt="Mapa Mental" width="400" height="400" />) </p>
+
 ## Funcionalidades da API
 
 - **Cadastro de Patos:** Endpoint para cadastrar patos com detalhes como nome e mãe.
