@@ -127,7 +127,7 @@ Para executar o projeto, siga estas etapas:
    ```bash
    docker-compose up
 Acesse a API através do endpoint correspondente à sua operação desejada.
-
+    - A API estará disponível na porta `http://localhost:8080.`
 
 - Este README oferece uma visão geral do projeto, detalhes sobre a estrutura do código, instruções para configurar o ambiente e os diferenciais implementados.
 
