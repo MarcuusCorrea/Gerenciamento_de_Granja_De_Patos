@@ -2,6 +2,9 @@
 
 Este projeto consiste em uma API REST desenvolvida em Java utilizando Spring Boot para gerenciar uma granja de patos. A API permite o cadastro individual de patos, cadastro de clientes, venda de patos para clientes cadastrados e geração de relatórios em formatos Excel e PDF.
 
+![image](https://github.com/MarcuusCorrea/Gerenciamento_de_Granja_De_Patos/assets/96303668/2de638e2-2409-457b-a08b-1a5f9efdfa47)
+
+
 ## Requisitos Funcionais
 
 1. **Cadastro de Patos:**
@@ -81,5 +84,5 @@ Para executar o projeto, siga estas etapas:
    ```bash
    docker-compose up
 Acesse a API através do endpoint correspondente à sua operação desejada.
-Diferenciais
+
 
