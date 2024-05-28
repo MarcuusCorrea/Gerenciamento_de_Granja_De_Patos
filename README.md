@@ -80,8 +80,15 @@ Para executar o projeto, siga estas etapas:
 
 1. Instale o Docker.
 2. Configure a imagem do Docker utilizando o arquivo `docker-compose.yml`.
-3. Configure as informações do banco de dados no arquivo `application.properties`.
-4. Execute o seguinte comando no terminal para iniciar o ambiente:
+3. Configure as informações do banco de dados no arquivo `application.properties
+   spring.datasource.url=jdbc:mysql://db:3306/patos
+spring.datasource.username=user
+spring.datasource.password=password
+spring.jpa.hibernate.ddl-auto=update
+
+spring.flyway.enabled=true
+spring.flyway.baseline-on-migrate=true`
+5. Execute o seguinte comando no terminal para iniciar o ambiente:
    ```bash
    docker-compose up
 Acesse a API através do endpoint correspondente à sua operação desejada.
