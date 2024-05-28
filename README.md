@@ -11,10 +11,35 @@ Este projeto consiste em uma API REST desenvolvida em Java utilizando Spring Boo
 1. **Cadastro de Patos:**
     - Cada pato deve ser cadastrado individualmente no sistema.
     - Durante o cadastro, é necessário indicar a "mãe" de cada pato para melhor rastreamento.
+    - Ex usando o Postman:
+    - pato mãe:
+      ``` bash
+          http://localhost:8080/patos
+          {
+          "nome": "Mãe Uchiha",
+          "status": "Disponível",
+          "valor": 20.0
+          }
+    - Ex de associação de pato filho ao Pato mãe:
+      ``` bash
+    
+        {
+        "nome": "Filho Pato",
+        "status": "ativo",
+        "valor": 50.0,
+        "mae": {
+            "id": 1
+        }
+        }
 
 2. **Cadastro de Clientes:**
     - Os clientes podem ser cadastrados no sistema.
     - Cada cliente deve ter uma indicação se ele é elegível para desconto ou não (com/sem desconto).
+      ```bash
+              {
+                "nome": "Maria",
+                "elegivelDesconto": true
+                }    
 
 3. **Venda de Patos:**
     - É possível registrar a venda de um ou mais patos para um cliente cadastrado.
@@ -23,6 +48,11 @@ Este projeto consiste em uma API REST desenvolvida em Java utilizando Spring Boo
 
 4. **Listagem de Patos Vendidos:**
     - O sistema permite a listagem de todos os patos vendidos, incluindo a data da venda e o cliente para quem foram vendidos.
+    ```bash
+          {
+              "idsPatos": [1, 2, 3], // Lista de IDs de patos
+              "idCliente": 123 // ID do cliente
+            }
 
 5. **Geração de Relatórios:**
     - É possível gerar relatórios de gerenciamento de patos em dois formatos: Excel e PDF.
