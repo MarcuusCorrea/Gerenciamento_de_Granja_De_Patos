@@ -78,16 +78,17 @@ O projeto possui a seguinte estrutura de pacotes:
 
 Para executar o projeto, siga estas etapas:
 
-1. Instale o Docker.
+1. Instale o Docker seguindo as instruções da [documentação oficial](https://www.docker.com/).
 2. Configure a imagem do Docker utilizando o arquivo `docker-compose.yml`.
-3. Configure as informações do banco de dados no arquivo `application.properties
-   spring.datasource.url=jdbc:mysql://db:3306/patos
-spring.datasource.username=user
-spring.datasource.password=password
-spring.jpa.hibernate.ddl-auto=update
+3. Configure as informações do banco de dados no arquivo `application.properties`.
+   ```bash
+   pring.datasource.url=jdbc:mysql://db:3306/patos
+   spring.datasource.username=user
+   spring.datasource.password=password
+   spring.jpa.hibernate.ddl-auto=update
 
-spring.flyway.enabled=true
-spring.flyway.baseline-on-migrate=true`
+   spring.flyway.enabled=true
+   spring.flyway.baseline-on-migrate=true`
 5. Execute o seguinte comando no terminal para iniciar o ambiente:
    ```bash
    docker-compose up
