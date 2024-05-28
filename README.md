@@ -2,7 +2,8 @@
 
 Este projeto consiste em uma API REST desenvolvida em Java utilizando Spring Boot para gerenciar uma granja de patos. A API permite o cadastro individual de patos, cadastro de clientes, venda de patos para clientes cadastrados e geração de relatórios em formatos Excel e PDF.
 
-<img src= "https://github.com/MarcuusCorrea/Gerenciamento_de_Granja_De_Patos/assets/96303668/10c3e3dd-a69b-4416-be71-422f19551787" alt="Mapa Mental" width="400" height="400" align="center"/>)
+<p align="center"> 
+    <img src= "https://github.com/MarcuusCorrea/Gerenciamento_de_Granja_De_Patos/assets/96303668/10c3e3dd-a69b-4416-be71-422f19551787" alt="Mapa Mental" width="400" height="400" />) </p>
 
 
 ## Requisitos Funcionais
