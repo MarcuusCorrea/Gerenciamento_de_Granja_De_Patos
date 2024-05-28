@@ -129,3 +129,8 @@ Para executar o projeto, siga estas etapas:
 Acesse a API através do endpoint correspondente à sua operação desejada.
 
 
+- Este README oferece uma visão geral do projeto, detalhes sobre a estrutura do código, instruções para configurar o ambiente e os diferenciais implementados.
+
+##Autor
+-Desenvolvido por [Marcos Corrêa].
+
