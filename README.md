@@ -5,7 +5,27 @@ Este projeto consiste em uma API REST desenvolvida em Java utilizando Spring Boo
 <p align="center"> 
     <img src= "https://github.com/MarcuusCorrea/Gerenciamento_de_Granja_De_Patos/assets/96303668/10c3e3dd-a69b-4416-be71-422f19551787" alt="Mapa Mental" width="400" height="400" />) </p>
 
+## Tecnologias Utilizadas
 
+- Java: Linguagem de programação principal.
+- Spring Boot: Framework para criar a API REST.
+- JPA/Hibernate: Para persistência de dados.
+- MySQL/PostgreSQL: Base de dados para armazenar informações.
+- Docker: pra armazenar MySQL
+- Maven
+- Spring Web
+- Apache POI: Biblioteca para geração de relatórios em Excel.
+- Jasper Report: Biblioteca para geração de relatórios em PDF.
+- Insomnia e Postman
+
+## Funcionalidades da API
+
+- **Cadastro de Patos:** Endpoint para cadastrar patos com detalhes como nome e mãe.
+- **Cadastro de Clientes:** Endpoint para cadastrar clientes, incluindo nome e elegibilidade para desconto.
+- **Registro de Vendas:** Endpoint para registrar vendas, aplicando descontos conforme necessário e registrando a data da venda.
+- **Listagem de Patos Vendidos:** Endpoint para obter uma lista de todos os patos vendidos com detalhes da transação.
+- **Geração de Relatórios:** Endpoints para gerar e baixar relatórios em Excel e PDF.
+- 
 ## Requisitos Funcionais
 
 1. **Cadastro de Patos:**
@@ -62,26 +82,6 @@ Este projeto consiste em uma API REST desenvolvida em Java utilizando Spring Boo
 <p align="center"> 
     <img src= "https://github.com/MarcuusCorrea/Gerenciamento_de_Granja_De_Patos/assets/96303668/404d5f4c-0efd-411d-9779-cd86e61bf3f2" alt="Mapa Mental" width="400" height="400" />) </p>
 
-## Funcionalidades da API
-
-- **Cadastro de Patos:** Endpoint para cadastrar patos com detalhes como nome e mãe.
-- **Cadastro de Clientes:** Endpoint para cadastrar clientes, incluindo nome e elegibilidade para desconto.
-- **Registro de Vendas:** Endpoint para registrar vendas, aplicando descontos conforme necessário e registrando a data da venda.
-- **Listagem de Patos Vendidos:** Endpoint para obter uma lista de todos os patos vendidos com detalhes da transação.
-- **Geração de Relatórios:** Endpoints para gerar e baixar relatórios em Excel e PDF.
-
-## Tecnologias Utilizadas
-
-- Java: Linguagem de programação principal.
-- Spring Boot: Framework para criar a API REST.
-- JPA/Hibernate: Para persistência de dados.
-- MySQL/PostgreSQL: Base de dados para armazenar informações.
-- Docker: pra armazenar MySQL
-- Maven
-- Spring Web
-- Apache POI: Biblioteca para geração de relatórios em Excel.
-- Jasper Report: Biblioteca para geração de relatórios em PDF.
-- Insomnia e Postman
 
 ## Estrutura do Projeto
 
