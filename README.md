@@ -76,6 +76,7 @@ Este projeto consiste em uma API REST desenvolvida em Java utilizando Spring Boo
 - Spring Boot: Framework para criar a API REST.
 - JPA/Hibernate: Para persistência de dados.
 - MySQL/PostgreSQL: Base de dados para armazenar informações.
+- Docker: pra armazenar MySQL
 - Maven
 - Spring Web
 - Apache POI: Biblioteca para geração de relatórios em Excel.
